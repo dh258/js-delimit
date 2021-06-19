@@ -1,5 +1,7 @@
 import arg from "arg";
 
+import { convertToNewlineCharacter } from "./main";
+
 function parseArgumentsIntoOptions(rawArgs) {
   const args = arg(
     {
@@ -20,6 +22,6 @@ function parseArgumentsIntoOptions(rawArgs) {
 }
 
 export async function cli(args) {
-  const options = parseArgumentsIntoOptions(args);
-  console.log(options);
+  const { input, output } = parseArgumentsIntoOptions(args);
+  await convertToNewlineCharacter(input, output);
 }
