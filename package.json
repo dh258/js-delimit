@@ -4,8 +4,8 @@
   "description": "A package to convert delimit newline to \n character",
   "main": "src/main.js",
   "bin": {
-    "@dhoei/js-delimit": "bin/js-delimit",
-    "js-delimit": "bin/js-delimit"
+    "@dhoei/js-delimit": "bin/js-delimit.js",
+    "js-delimit": "bin/js-delimit.js"
   },
   "publishConfig": {
     "access": "public"
@@ -22,7 +22,11 @@
   "license": "ISC",
   "dependencies": {
     "arg": "^5.0.0",
+    "args": "^5.0.1",
     "esm": "^3.2.25",
     "inquirer": "^8.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0"
   }
 }
